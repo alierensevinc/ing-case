@@ -66,27 +66,35 @@ export class AddEmployee extends LitElement {
             composed: true
         });
         this.dispatchEvent(event);
-        window.location.href = '/dev/index.html';
+        window.location.href = '../index.html';
     }
 
     render() {
         return html`
             <div class="add-form">
-                <input type="text" name="firstName" placeholder="First Name" .value=${this.newEmployee.firstName}
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" .value=${this.newEmployee.firstName}
                        @input=${this.handleInputChange}/>
-                <input type="text" name="lastName" placeholder="Last Name" .value=${this.newEmployee.lastName}
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" .value=${this.newEmployee.lastName}
                        @input=${this.handleInputChange}/>
-                <input type="date" name="dateOfEmployment" placeholder="Date of Employment"
+                <label for="dateOfEmployment">Date of Employment</label>
+                <input type="date" id="dateOfEmployment" name="dateOfEmployment" placeholder="Date of Employment"
                        .value=${this.newEmployee.dateOfEmployment} @input=${this.handleInputChange}/>
-                <input type="date" name="dateOfBirth" placeholder="Date of Birth" .value=${this.newEmployee.dateOfBirth}
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="Date of Birth" .value=${this.newEmployee.dateOfBirth}
                        @input=${this.handleInputChange}/>
-                <input type="text" name="phoneNumber" placeholder="Phone Number" .value=${this.newEmployee.phoneNumber}
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" .value=${this.newEmployee.phoneNumber}
                        @input=${this.handleInputChange}/>
-                <input type="email" name="email" placeholder="Email" .value=${this.newEmployee.email}
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" .value=${this.newEmployee.email}
                        @input=${this.handleInputChange}/>
-                <input type="text" name="department" placeholder="Department" .value=${this.newEmployee.department}
+                <label for="department">Department</label>
+                <input type="text" id="department" name="department" placeholder="Department" .value=${this.newEmployee.department}
                        @input=${this.handleInputChange}/>
-                <input type="text" name="position" placeholder="Position" .value=${this.newEmployee.position}
+                <label for="position">Position</label>
+                <input type="text" id="position" name="position" placeholder="Position" .value=${this.newEmployee.position}
                        @input=${this.handleInputChange}/>
                 <button class="btn" @click=${this.handleAddEmployee}>
                     ${this.isEditing ? 'Update Employee' : 'Add Employee'}
