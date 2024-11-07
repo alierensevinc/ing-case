@@ -1,12 +1,12 @@
-import { LitElement, html, css } from 'lit';
+import {css, html, LitElement} from 'lit';
 
 export class EmployeeManagement extends LitElement {
     static properties = {
-        employees: { type: Array },
-        viewMode: { type: String },
-        searchTerm: { type: String },
-        currentPage: { type: Number },
-        itemsPerPage: { type: Number }
+        employees: {type: Array},
+        viewMode: {type: String},
+        searchTerm: {type: String},
+        currentPage: {type: Number},
+        itemsPerPage: {type: Number}
     };
 
     static styles = css`
@@ -16,60 +16,72 @@ export class EmployeeManagement extends LitElement {
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .container {
             background: white;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
         }
+
         .search-input {
             padding: 0.5rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             width: 250px;
         }
+
         .view-toggle {
             display: flex;
             gap: 0.5rem;
         }
+
         .btn {
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
+
         .btn-primary {
             background: #3b82f6;
             color: white;
         }
+
         .btn-danger {
             background: #ef4444;
             color: white;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
+
         th, td {
             padding: 0.75rem;
             text-align: left;
             border-bottom: 1px solid #e5e7eb;
         }
+
         th {
             background: #f9fafb;
             font-weight: 600;
         }
+
         .list-view {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
+
         .list-item {
             padding: 1rem;
             border: 1px solid #e5e7eb;
@@ -78,12 +90,14 @@ export class EmployeeManagement extends LitElement {
             justify-content: space-between;
             align-items: center;
         }
+
         .pagination {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-top: 1rem;
         }
+
         .actions {
             display: flex;
             gap: 0.5rem;
