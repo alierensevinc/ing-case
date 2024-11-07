@@ -1,4 +1,5 @@
 import {css, html, LitElement} from 'lit';
+import {employees} from "./src/data.js";
 
 export class EmployeeManagement extends LitElement {
     static properties = {
@@ -106,19 +107,7 @@ export class EmployeeManagement extends LitElement {
 
     constructor() {
         super();
-        this.employees = [
-            {
-                id: 1,
-                firstName: 'John',
-                lastName: 'Doe',
-                dateOfEmployment: '2024-01-15',
-                dateOfBirth: '1990-05-20',
-                phoneNumber: '+1234567890',
-                email: 'john.doe@company.com',
-                department: 'Tech',
-                position: 'Senior'
-            }
-        ];
+        this.employees = employees;
         this.viewMode = 'table';
         this.searchTerm = '';
         this.currentPage = 1;
